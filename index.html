@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>List of Dreams</title>
+
+      <style>
+         body {
+            font-family: "Acrom";
+            background-image: url(img/dreams.jpg);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-size: 60%;
+            background-position-y: 8%;
+            background-attachment: fixed;
+         }
+
+         #save {
+            cursor: pointer;
+            background: lime;
+         }
+
+         #save:hover {
+            background: rgb(4, 121, 4);
+         }
+
+         .delete {
+            cursor: pointer;
+            background: #e66150;
+            width: 50px;
+            text-align: center;
+            padding: 5px 10px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+         }
+
+         .delete:hover {
+            background: #f31919;
+         }
+
+         input {
+            border-radius: 5px;
+            margin: 5px 0;
+            font-family: "Acrom";
+            width: 175px;
+         }
+
+         button {
+            border-radius: 5px;
+            font-family: "Acrom";
+         }
+
+         #main {
+            max-width: 600px;
+         }
+
+         .image {
+            max-width: 400px;
+            max-height: 250px;
+            display: block;
+            margin: auto;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            border-radius: 3px;
+         }
+
+         .title {
+            margin-top: 30px;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: underline;
+         }
+
+         .quantity {
+            font-size: 20px;
+            margin-top: 5px;
+         }
+
+         @font-face {
+            font-family: "Acrom";
+            src: url("../fonts/acrom/Acrom-ExtraBold.eot");
+            src: local("Acrom ExtraBold"), local("Acrom-ExtraBold"),
+               url("../fonts/acrom/Acrom-ExtraBold.eot?#iefix") format("embedded-opentype"),
+               url("../fonts/acrom/Acrom-ExtraBold.woff") format("woff"),
+               url("../fonts/acrom/Acrom-ExtraBold.ttf") format("truetype");
+            font-weight: 800;
+            font-style: normal;
+         }
+
+         @font-face {
+            font-family: "Acrom";
+            src: url("../fonts/acrom/Acrom-Bold.eot");
+            src: local("Acrom Bold"), local("Acrom-Bold"),
+               url("../fonts/acrom/Acrom-Bold.eot?#iefix") format("embedded-opentype"),
+               url("../fonts/acrom/Acrom-Bold.woff") format("woff"),
+               url("../fonts/acrom/Acrom-Bold.ttf") format("truetype");
+            font-weight: bold;
+            font-style: normal;
+         }
+
+         @font-face {
+            font-family: "Acrom";
+            src: url("../fonts/acrom/Acrom-Regular.eot");
+            src: local("Acrom Regular"), local("Acrom-Regular"),
+               url("../fonts/acrom/Acrom-Regular.eot?#iefix") format("embedded-opentype"),
+               url("../fonts/acrom/Acrom-Regular.woff") format("woff"),
+               url("../fonts/acrom/Acrom-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+         }
+
+         @media only screen and (max-width: 425px) {
+            .image {
+               width: 290px;
+               height: 200px;
+            }
+         }
+
+         @media only screen and (max-width: 1480px) {
+            body {
+               background-image: none;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <!-- ==================== Проект "Список желаний!" ============== -->
+
+      <div class="input-container">
+         <input type="text" id="title" placeholder="Enter your dream" />
+         <input type="number" id="quantity" min="1" placeholder="$" />
+         <input type="text" id="image" placeholder="Link on view your dream" />
+         <!-- <input type="checkbox" id="status" /> -->
+         <button id="save">Add dream</button>
+      </div>
+
+      <div id="main"></div>
+      <script src="js/main.js"></script>
+   </body>
+</html>
